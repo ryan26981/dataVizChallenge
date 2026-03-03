@@ -324,11 +324,11 @@ other_bar = plt.Rectangle((0,0),1,1, color="lightgrey", label="Other Stadiums")
 ax.legend(handles=[colorado_bar, other_bar], loc='lower right', frameon=True)
 
 # Add annotation for Colorado
-colorado_index = avgDF_2010_sorted[avgDF_2010_sorted.home == "COL"].index[0]
+colorado_index = list(avgDF_2010_sorted.home).index("COL")
 colorado_runs = avgDF_2010_sorted[avgDF_2010_sorted.home == "COL"]["totalRuns"].iloc[0]
 ax.annotate(f"COL: {colorado_runs:.2f} runs/game", 
             xy=(colorado_runs, colorado_index), 
-            xytext=(colorado_runs + 0.5, colorado_index),
+            xytext=(colorado_runs + 0.5, colorado_index+14),
             arrowprops=dict(arrowstyle='->', color='darkorchid', lw=2),
             fontsize=10, fontweight='bold', color='darkorchid')
 
