@@ -406,8 +406,11 @@ fig, axs = plt.subplots(1, 2, figsize=(12, 8), sharey=True)
 for index, (season, runs_col) in enumerate([(2010, "runs_2010"), (2021, "runs_2021")]):
     groupDF = comparison_data.sort_values(runs_col, ascending=True)
     runs = groupDF[runs_col]
-    bestRuns = runs.max()
-    colorArray = ["darkorchid" if r == bestRuns else "lightgrey" for r in runs]
+
+    colorArray = [
+        "darkorchid" if stadium == "COL" else "lightgrey"
+        for stadium in groupDF.home
+    ]
 
     axs[index].barh(groupDF.home, runs, color=colorArray)
     axs[index].set_title(f"Season: {season}")
