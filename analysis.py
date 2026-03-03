@@ -136,3 +136,30 @@ print(f"\nSummary Statistics for 2010:")
 print(f"Colorado (COL) average runs per game: {colorado_runs:.2f}")
 print(f"League average runs per game: {avgDF_2010_sorted.totalRuns.mean():.2f}")
 print(f"Colorado is {((colorado_runs / avgDF_2010_sorted.totalRuns.mean()) - 1) * 100:.1f}% above league average")
+# Advanced Object-Oriented Techniques
+# Create a comprehensive comparison visualization
+
+# Prepare data for comparison
+comparison_data = pd.merge(
+    avgDF_2010[['home', 'totalRuns']].rename(columns={'totalRuns': 'runs_2010'}),
+    avgDF_2021[['home', 'totalRuns']].rename(columns={'totalRuns': 'runs_2021'}),
+    on='home', how='inner'
+)
+
+## Create the visualization: 2010 vs 2021 side by side
+fig, axs = plt.subplots(1, 2, figsize=(12, 8), sharey=True)
+
+for index, (season, runs_col) in enumerate([(2010, "runs_2010"), (2021, "runs_2021")]):
+    groupDF = comparison_data.sort_values(runs_col, ascending=True)
+    runs = groupDF[runs_col]
+    bestRuns = runs.max()
+    colorArray = ["darkorchid" if r == bestRuns else "lightgrey" for r in runs]
+    axs[index].barh(groupDF.home, runs, color=colorArray)
+    axs[index].set_title(f"Season: {season}")
+    axs[index].set_xlabel("Average Runs")
+    axs[index].set_ylabel("Stadium")
+    axs[index].tick_params(axis="y", labelsize=9)
+
+fig.suptitle("Comparison of Runs per Stadium by Season")
+plt.tight_layout()
+plt.show()
