@@ -111,11 +111,11 @@ other_bar = plt.Rectangle((0,0),1,1, color="lightgrey", label="Other Stadiums")
 ax.legend(handles=[colorado_bar, other_bar], loc='lower right', frameon=True)
 
 # Add annotation for Colorado
-colorado_index = avgDF_2010_sorted[avgDF_2010_sorted.home == "COL"].index[0]
+colorado_index = list(avgDF_2010_sorted.home).index("COL")
 colorado_runs = avgDF_2010_sorted[avgDF_2010_sorted.home == "COL"]["totalRuns"].iloc[0]
 ax.annotate(f"COL: {colorado_runs:.2f} runs/game", 
             xy=(colorado_runs, colorado_index), 
-            xytext=(colorado_runs + 0.5, colorado_index),
+            xytext=(colorado_runs + 0.5, colorado_index+14),
             arrowprops=dict(arrowstyle='->', color='darkorchid', lw=2),
             fontsize=10, fontweight='bold', color='darkorchid')
 
@@ -139,18 +139,6 @@ print(f"Colorado is {((colorado_runs / avgDF_2010_sorted.totalRuns.mean()) - 1) 
 # Advanced Object-Oriented Techniques
 # Create a comprehensive comparison visualization
 #
-# Visualization explanation:
-# We build a side-by-side comparison of average runs per game by stadium for 2010
-# and 2021. The two horizontal bar charts share the same y-axis (stadium names) so
-# you can easily compare the same venue across seasons. Within each panel, bars
-# are sorted by runs (low to high). The stadium with the highest average runs in
-# each season is highlighted in dark orchid; all others are light grey. This makes
-# it clear which ballpark was the highest-scoring environment in each year (e.g.
-# Coors Field in Denver) and how that ranking or gap might have changed from 2010
-# to 2021.
-
-This visualization is correct but it did not give a conclusion, it just explained what the visualiztion was doing 
-from a technical standpoint.
 
 # Prepare data for comparison
 comparison_data = pd.merge(
