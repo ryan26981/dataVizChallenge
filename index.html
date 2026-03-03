@@ -388,7 +388,7 @@ First few rows of 2010 data:
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/stage-3-mapping-exploration-output-1.png" id="stage-3-mapping-exploration" width="758" height="854" class="figure-img"></p>
+<p><img src="index_files/figure-html/stage-3-mapping-exploration-output-1.png" id="stage-3-mapping-exploration" width="758" height="855" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -440,11 +440,11 @@ First few rows of 2010 data:
 <span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>ax.legend(handles<span class="op">=</span>[colorado_bar, other_bar], loc<span class="op">=</span><span class="st">'lower right'</span>, frameon<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Add annotation for Colorado</span></span>
-<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>colorado_index <span class="op">=</span> avgDF_2010_sorted[avgDF_2010_sorted.home <span class="op">==</span> <span class="st">"COL"</span>].index[<span class="dv">0</span>]</span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>colorado_index <span class="op">=</span> <span class="bu">list</span>(avgDF_2010_sorted.home).index(<span class="st">"COL"</span>)</span>
 <span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>colorado_runs <span class="op">=</span> avgDF_2010_sorted[avgDF_2010_sorted.home <span class="op">==</span> <span class="st">"COL"</span>][<span class="st">"totalRuns"</span>].iloc[<span class="dv">0</span>]</span>
 <span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="ss">f"COL: </span><span class="sc">{</span>colorado_runs<span class="sc">:.2f}</span><span class="ss"> runs/game"</span>, </span>
 <span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>            xy<span class="op">=</span>(colorado_runs, colorado_index), </span>
-<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>            xytext<span class="op">=</span>(colorado_runs <span class="op">+</span> <span class="fl">0.5</span>, colorado_index),</span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>            xytext<span class="op">=</span>(colorado_runs <span class="op">+</span> <span class="fl">0.5</span>, colorado_index<span class="op">+</span><span class="dv">14</span>),</span>
 <span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>            arrowprops<span class="op">=</span><span class="bu">dict</span>(arrowstyle<span class="op">=</span><span class="st">'-&gt;'</span>, color<span class="op">=</span><span class="st">'darkorchid'</span>, lw<span class="op">=</span><span class="dv">2</span>),</span>
 <span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>            fontsize<span class="op">=</span><span class="dv">10</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>, color<span class="op">=</span><span class="st">'darkorchid'</span>)</span>
 <span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a></span>
@@ -468,7 +468,7 @@ First few rows of 2010 data:
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/stage-4-formatting-output-1.png" id="stage-4-formatting" width="758" height="567" class="figure-img"></p>
+<p><img src="index_files/figure-html/stage-4-formatting-output-1.png" id="stage-4-formatting" width="758" height="527" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -522,7 +522,7 @@ Colorado is 20.8% above league average</code></pre>
 </div>
 <div class="callout-body-container callout-body">
 <p><strong>Question 1: Using Subplot Layout</strong> - Create a two-facet visualization that shows the total runs for 2010 and 2021 for each stadium in a single figure. Highlight Colorado in the visualization.</p>
-<div id="abb06d99" class="cell" data-execution_count="6">
+<div id="6894cf2a" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare data for comparison</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>comparison_data <span class="op">=</span> pd.merge(</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    avgDF_2010[[<span class="st">'home'</span>, <span class="st">'totalRuns'</span>]].rename(columns<span class="op">=</span>{<span class="st">'totalRuns'</span>: <span class="st">'runs_2010'</span>}),</span>
