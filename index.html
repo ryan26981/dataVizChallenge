@@ -137,80 +137,59 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>The new reality:</strong> The four stages of competence are Ignorance → Awareness → Learning → Mastery. AI lets us produce Mastery-level work while operating primarily in the Awareness stage. I focus on awareness training, you leverage AI for execution, and together we create outputs that used to require years of dedicated study.</p>
 </div>
 </div>
-</section>
-<section id="getting-started-repository-setup" class="level2">
-<h2 class="anchored" data-anchor-id="getting-started-repository-setup">Getting Started: Repository Setup</h2>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>📁 Getting Started
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Step 1:</strong> Fork and clone this challenge repository: <code>https://github.com/flyaflya/dataVizChallenge.git</code></p>
-<ul>
-<li>View the original challenge page: <a href="https://flyaflya.github.io/dataVizChallenge/" class="uri">https://flyaflya.github.io/dataVizChallenge/</a></li>
-<li>Fork it to your GitHub account, then clone it from your GitHub account to your local machine</li>
-</ul>
-<p><strong>Step 2:</strong> Set up your Python environment</p>
-<ul>
-<li><strong>Recommended:</strong> Use your existing virtual environment from Tech Setup Challenge Part 2
-<ul>
-<li>Press <code>Ctrl+Shift+P</code> → “Python: Select Interpreter”</li>
-<li>Navigate to your existing virtual environment (e.g., <code>your-previous-project/venv/Scripts/python.exe</code>)</li>
-<li>Install additional packages: <code>pip install pandas numpy matplotlib seaborn</code></li>
-</ul></li>
-<li><strong>Alternative:</strong> Create a new virtual environment following <a href="https://quarto.org/docs/projects/virtual-environments.html">Quarto documentation</a></li>
-</ul>
-<p><strong>Step 3:</strong> You’re ready to start! The data loading code and starter code for the visualizations are already provided in this file.</p>
-<p><strong>Note:</strong> This challenge uses the same <code>index.qmd</code> file you’re reading right now - you’ll edit it to complete your analysis.</p>
-<p><strong>Before publishing:</strong> Remove or comment out the “Getting Started” and “Grading and Submission” sections from your final GitHub Pages version so your published page reads as a cohesive Coors Field analysis story.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>⚠️ Cloud Storage Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Avoid using Google Drive, OneDrive, or other cloud storage for Python projects!</strong> These services can cause issues with package installations and virtual environment corruption. Keep your Python projects in a local folder like <code>C:\Users\YourName\Documents\</code> instead.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>💾 Important: Save Your Work Frequently!
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Before you start:</strong> Make sure to commit your work often using the Source Control panel in Cursor (Ctrl+Shift+G or Cmd+Shift+G). This prevents the AI from overwriting your progress and ensures you don’t lose your work.</p>
-<p><strong>Commit after each major step:</strong></p>
-<ul>
-<li>After completing each stage section</li>
-<li>After adding your visualizations</li>
-<li>After completing your advanced object-oriented techniques</li>
-<li>Before asking the AI for help with new code</li>
-</ul>
-<p><strong>How to commit:</strong></p>
-<ol type="1">
-<li>Open Source Control panel (Ctrl+Shift+G)</li>
-<li>Stage your changes (+ button)</li>
-<li>Write a descriptive commit message</li>
-<li>Click the checkmark to commit</li>
-</ol>
-<p><em>Remember: Frequent commits are your safety net!</em></p>
-</div>
-</div>
+<!-- ## Getting Started: Repository Setup
+
+::: {.callout-important}
+## 📁 Getting Started
+
+**Step 1:** Fork and clone this challenge repository: `https://github.com/flyaflya/dataVizChallenge.git`
+
+- View the original challenge page: <https://flyaflya.github.io/dataVizChallenge/>
+- Fork it to your GitHub account, then clone it from your GitHub account to your local machine
+
+**Step 2:** Set up your Python environment
+
+- **Recommended:** Use your existing virtual environment from Tech Setup Challenge Part 2
+  - Press `Ctrl+Shift+P` → "Python: Select Interpreter"
+  - Navigate to your existing virtual environment (e.g., `your-previous-project/venv/Scripts/python.exe`)
+  - Install additional packages: `pip install pandas numpy matplotlib seaborn`
+- **Alternative:** Create a new virtual environment following [Quarto documentation](https://quarto.org/docs/projects/virtual-environments.html)
+
+**Step 3:** You're ready to start! The data loading code and starter code for the visualizations are already provided in this file.
+
+**Note:** This challenge uses the same `index.qmd` file you're reading right now - you'll edit it to complete your analysis.
+
+**Before publishing:** Remove or comment out the "Getting Started" and "Grading and Submission" sections from your final GitHub Pages version so your published page reads as a cohesive Coors Field analysis story.
+:::
+
+::: {.callout-warning}
+## ⚠️ Cloud Storage Warning
+
+**Avoid using Google Drive, OneDrive, or other cloud storage for Python projects!** These services can cause issues with package installations and virtual environment corruption. Keep your Python projects in a local folder like `C:\Users\YourName\Documents\` instead.
+:::
+
+::: {.callout-warning}
+## 💾 Important: Save Your Work Frequently!
+
+**Before you start:** Make sure to commit your work often using the Source Control panel in Cursor (Ctrl+Shift+G or Cmd+Shift+G). This prevents the AI from overwriting your progress and ensures you don't lose your work.
+
+**Commit after each major step:**
+
+- After completing each stage section
+- After adding your visualizations
+- After completing your advanced object-oriented techniques
+- Before asking the AI for help with new code
+
+**How to commit:**
+
+1. Open Source Control panel (Ctrl+Shift+G)
+2. Stage your changes (+ button)
+3. Write a descriptive commit message
+4. Click the checkmark to commit
+
+*Remember: Frequent commits are your safety net!*
+:::
+-->
 </section>
 <section id="the-four-stages-of-data-visualization" class="level2">
 <h2 class="anchored" data-anchor-id="the-four-stages-of-data-visualization">The Four Stages of Data Visualization</h2>
@@ -562,48 +541,29 @@ Colorado is 20.8% above league average</code></pre>
 <p><strong>Your Task:</strong> Create a professional visualization and narrative that builds towards and demonstrates mastery of object-oriented matplotlib and the four stages framework.</p>
 <p><strong>Create visualizations showing:</strong> - Stadium run-friendliness comparison between 2010 and 2021 - Focus on Colorado’s performance relative to other stadiums - Use object-oriented matplotlib techniques throughout</p>
 <p><strong>Your visualizations should:</strong> - Use clear labels and professional formatting - Demonstrate all four stages of visualization - Be appropriate for a business audience - Show mastery of object-oriented matplotlib - Do not <code>echo</code> the code that creates the visualizations</p>
+<!-- ## Grading and Submission
+
+**Submission Checklist:**
+
+- [ ] Fork repository to your GitHub account
+- [ ] Clone locally using Cursor (or VS Code)
+- [ ] Complete discussion questions
+- [ ] Render document to HTML successfully
+- [ ] Push HTML files to your repository
+- [ ] Enable GitHub Pages
+- [ ] Verify site at `https://[your-username].github.io/dataVizChallenge/`
+
+**Grading:**
+
+| Grade | Requirements |
+|-------|--------------|
+| Minimum | Discussion questions for at least 3 of 4 stages; working GitHub Pages site |
+| 85% | All 4 stages with comprehensive, well-reasoned responses |
+| 100% | All discussion questions plus professional visualizations demonstrating mastery |
+
+**Report Quality:** Professional writing, concise analysis, clear demonstration of object-oriented matplotlib.
+-->
 </section>
-</section>
-<section id="grading-and-submission" class="level2">
-<h2 class="anchored" data-anchor-id="grading-and-submission">Grading and Submission</h2>
-<p><strong>Submission Checklist:</strong></p>
-<ul class="task-list">
-<li><label><input type="checkbox">Fork repository to your GitHub account</label></li>
-<li><label><input type="checkbox">Clone locally using Cursor (or VS Code)</label></li>
-<li><label><input type="checkbox">Complete discussion questions</label></li>
-<li><label><input type="checkbox">Render document to HTML successfully</label></li>
-<li><label><input type="checkbox">Push HTML files to your repository</label></li>
-<li><label><input type="checkbox">Enable GitHub Pages</label></li>
-<li><label><input type="checkbox">Verify site at <code>https://[your-username].github.io/dataVizChallenge/</code></label></li>
-</ul>
-<p><strong>Grading:</strong></p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 66%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Grade</th>
-<th>Requirements</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Minimum</td>
-<td>Discussion questions for at least 3 of 4 stages; working GitHub Pages site</td>
-</tr>
-<tr class="even">
-<td>85%</td>
-<td>All 4 stages with comprehensive, well-reasoned responses</td>
-</tr>
-<tr class="odd">
-<td>100%</td>
-<td>All discussion questions plus professional visualizations demonstrating mastery</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Report Quality:</strong> Professional writing, concise analysis, clear demonstration of object-oriented matplotlib.</p>
 </section>
 
 </main>

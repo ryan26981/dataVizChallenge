@@ -32,7 +32,7 @@ This challenge pushes boundaries intentionally. You'll tackle problems that norm
 **The new reality:** The four stages of competence are Ignorance → Awareness → Learning → Mastery. AI lets us produce Mastery-level work while operating primarily in the Awareness stage. I focus on awareness training, you leverage AI for execution, and together we create outputs that used to require years of dedicated study.
 :::
 
-## Getting Started: Repository Setup
+<!-- ## Getting Started: Repository Setup
 
 ::: {.callout-important}
 ## 📁 Getting Started
@@ -84,6 +84,7 @@ This challenge pushes boundaries intentionally. You'll tackle problems that norm
 
 *Remember: Frequent commits are your safety net!*
 :::
+-->
 
 ## The Four Stages of Data Visualization
 
@@ -160,7 +161,9 @@ Our purpose is to investigate whether Coors Field in Denver, Colorado is truly t
 
 **Question 1: Hypothesis Formation**
 - Why might high altitude affect baseball performance?  Is Coors Field affected by high altitude?
-:::
+High altitude reduces air density, which means there is less air resistance on the baseball. As a result, the ball can travel farther when hit, and pitches tend to have less movement. Both effects can lead to more scoring and more home runs.
+
+Coors Field is located in Denver at about 5,200 feet above sea level, making it the highest-elevation stadium in Major League Baseball. Because of this altitude, we would expect Coors Field to have higher average total runs, and possibly more home runs, than other stadiums.
 
 ## Stage 2: Curation of Content
 
@@ -412,7 +415,7 @@ comparison_data = pd.merge(
 - Show mastery of object-oriented matplotlib
 - Do not `echo` the code that creates the visualizations
 
-## Grading and Submission
+<!-- ## Grading and Submission
 
 **Submission Checklist:**
 
@@ -433,3 +436,4 @@ comparison_data = pd.merge(
 | 100% | All discussion questions plus professional visualizations demonstrating mastery |
 
 **Report Quality:** Professional writing, concise analysis, clear demonstration of object-oriented matplotlib.
+-->

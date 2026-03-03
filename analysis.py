@@ -138,6 +138,19 @@ print(f"League average runs per game: {avgDF_2010_sorted.totalRuns.mean():.2f}")
 print(f"Colorado is {((colorado_runs / avgDF_2010_sorted.totalRuns.mean()) - 1) * 100:.1f}% above league average")
 # Advanced Object-Oriented Techniques
 # Create a comprehensive comparison visualization
+#
+# Visualization explanation:
+# We build a side-by-side comparison of average runs per game by stadium for 2010
+# and 2021. The two horizontal bar charts share the same y-axis (stadium names) so
+# you can easily compare the same venue across seasons. Within each panel, bars
+# are sorted by runs (low to high). The stadium with the highest average runs in
+# each season is highlighted in dark orchid; all others are light grey. This makes
+# it clear which ballpark was the highest-scoring environment in each year (e.g.
+# Coors Field in Denver) and how that ranking or gap might have changed from 2010
+# to 2021.
+
+This visualization is correct but it did not give a conclusion, it just explained what the visualiztion was doing 
+from a technical standpoint.
 
 # Prepare data for comparison
 comparison_data = pd.merge(
